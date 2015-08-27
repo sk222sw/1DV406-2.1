@@ -1,0 +1,75 @@
+﻿body {  
+}
+
+#form1 {
+    width: 1200px;
+    height: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+}
+
+#BigImage {
+position:absolute;
+height: 400px;
+width: 700px;
+margin: 0 auto;
+top: 100px;
+bottom: 0;
+left: 0;
+right: 0;
+}
+
+#BigImageArea {
+    width: 100%;
+    height: 450px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+
+#thumbnails {
+    margin: 0 auto;
+    width: 450px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 80px;
+    white-space: nowrap;
+}
+
+#uploadControls{
+    width: 450px;
+    margin: 0 auto;
+}
+
+#successDiv {
+    margin: 0 auto;
+    width: 300px;
+    height: 50px;
+    background-color: #82ff64;
+    text-align: center;
+    color: #043800;
+}
+
+    #successDiv p {
+        padding-top: 15px;
+    }
+
+#closeSuccess {
+    float: right;
+    height: 20px;
+    width: 20px;
+    border: solid red 1px;
+    background-color: red;
+    color: white;
+}
+
+#errorDiv {
+    list-style: none;
+    color: white;
+    background: red;
+}
+
+h1 {
+    text-align: center;
+}

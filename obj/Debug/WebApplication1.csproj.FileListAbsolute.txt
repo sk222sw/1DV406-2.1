@@ -1,0 +1,7 @@
+C:\Users\Sonny\Documents\Plugg\Web Forms\Upload\WebApplication1\WebApplication1\bin\WebApplication1.dll.config
+C:\Users\Sonny\Documents\Plugg\Web Forms\Upload\WebApplication1\WebApplication1\bin\WebApplication1.dll
+C:\Users\Sonny\Documents\Plugg\Web Forms\Upload\WebApplication1\WebApplication1\bin\WebApplication1.pdb
+C:\Users\Sonny\Documents\Plugg\Web Forms\Upload\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
+C:\Users\Sonny\Documents\Plugg\Web Forms\Upload\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
+C:\Users\Sonny\Documents\Plugg\Web Forms\Upload\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\Users\Sonny\Documents\Plugg\Web Forms\Upload\WebApplication1\WebApplication1\bin\AspNet.ScriptManager.jQuery.dll
