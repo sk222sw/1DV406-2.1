@@ -5,3 +5,21 @@ C:\Users\Sonny\Documents\Plugg\Web Forms\Upload\WebApplication1\WebApplication1\
 C:\Users\Sonny\Documents\Plugg\Web Forms\Upload\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
 C:\Users\Sonny\Documents\Plugg\Web Forms\Upload\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
 C:\Users\Sonny\Documents\Plugg\Web Forms\Upload\WebApplication1\WebApplication1\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\sk222sw\Desktop\1DV406-2.1-master\bin\WebApplication1.dll.config
+C:\Users\sk222sw\Desktop\1DV406-2.1-master\bin\WebApplication1.dll
+C:\Users\sk222sw\Desktop\1DV406-2.1-master\bin\WebApplication1.pdb
+C:\Users\sk222sw\Desktop\1DV406-2.1-master\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
+C:\Users\sk222sw\Desktop\1DV406-2.1-master\obj\Debug\WebApplication1.dll
+C:\Users\sk222sw\Desktop\1DV406-2.1-master\obj\Debug\WebApplication1.pdb
+P:\Web forms\1DV406-2.1-master\bin\WebApplication1.dll.config
+P:\Web forms\1DV406-2.1-master\bin\WebApplication1.dll
+P:\Web forms\1DV406-2.1-master\bin\WebApplication1.pdb
+P:\Web forms\1DV406-2.1-master\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
+P:\Web forms\1DV406-2.1-master\obj\Debug\WebApplication1.dll
+P:\Web forms\1DV406-2.1-master\obj\Debug\WebApplication1.pdb
+C:\Users\Sonny\Desktop\1DV406-2.1-master\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
+C:\Users\Sonny\Desktop\1DV406-2.1-master\obj\Debug\WebApplication1.dll
+C:\Users\Sonny\Desktop\1DV406-2.1-master\obj\Debug\WebApplication1.pdb
+C:\Users\Sonny\Desktop\1DV406-2.1-master\bin\WebApplication1.dll.config
+C:\Users\Sonny\Desktop\1DV406-2.1-master\bin\WebApplication1.dll
+C:\Users\Sonny\Desktop\1DV406-2.1-master\bin\WebApplication1.pdb

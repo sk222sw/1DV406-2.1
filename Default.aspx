@@ -33,16 +33,13 @@
             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Filen måste vara jpg/gif/png." ControlToValidate="ImageFileUpload" Display="None" ValidationExpression="^.*\.(gif|jpg|png|jpeg)$" />
 
             <asp:Button ID="UploadButton" runat="server" Text="Upload" OnClick="UploadButton_Click" />
-            <asp:Label ID="Label1" runat="server" Text="Labeln"></asp:Label>
 
             <asp:PlaceHolder ID="SuccessPlaceHolder" runat="server">
                 <div id="successDiv">
                     <div id="closeSuccess">
                         x
                     </div>
-                    <p>
-                        Uppladdningen lyckades!
-                    </p>
+                        <asp:Label ID="SuccessLabel" runat="server" Text="" />
                 </div>
             </asp:PlaceHolder>
             <asp:PlaceHolder ID="ErrorPlaceHolder" runat="server" Visible="true">

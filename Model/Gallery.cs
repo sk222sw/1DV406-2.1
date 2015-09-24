@@ -59,43 +59,41 @@ namespace WebApplication1.Model
 
         public static string SaveImage(Stream stream, string fileName)
         {
-            var image = System.Drawing.Image.FromStream(stream);
-            var thumbnail = image.GetThumbnailImage(60, 50, null, System.IntPtr.Zero);
-
             //kolla om det finns en fil att ladda upp
-            if (fileName != "")
+            if (!String.IsNullOrWhiteSpace(fileName))
             {
+                //validera extension på filen
+                if (!ApprovedExtensions.IsMatch(fileName))
+                {
+                    throw new ArgumentException("Otillåten filtyp.");
+                }
+
+                var image = System.Drawing.Image.FromStream(stream);
+
                 //kasta undantag om det är fel mime-typ
                 if (!IsValidImage(image))
                 {
                     throw new ArgumentException("Otillåten MIME-typ");
                 }
-                else
+
+                //ta bort ogiltiga tecken
+                fileName = SantizePath.Replace(fileName, "");
+                
+                //kör RenameFile om det redan existerar en fil med samma namn
+                if (ImageExists(fileName))
                 {
-                    //kör RenameFile om det redan existerar en fil med samma namn
-                    if (ImageExists(fileName))
-                    {
-                        fileName = RenameFile(fileName);
-                    }
-
-                    //validera extension på filen
-                    if (!ApprovedExtensions.IsMatch(fileName))
-                    {
-                        throw new ArgumentException("Otillåten filtyp.");
-                    }
-                    else
-                    {
-                        //ta bort ogiltiga tecken
-                        SantizePath.Replace(fileName, "");
-
-                        //spara
-                        var saveUrl = Path.Combine(PhysicalUploadedImagesPath, fileName);
-                        thumbnail.Save(Path.Combine(ThumbnailPath, fileName));
-                        image.Save(saveUrl);
-
-                        return saveUrl;
-                    }
+                    fileName = RenameFile(fileName);
                 }
+
+
+                //spara
+                var saveUrl = Path.Combine(PhysicalUploadedImagesPath, fileName);
+                image.Save(saveUrl);
+                
+                var thumbnail = image.GetThumbnailImage(60, 50, null, System.IntPtr.Zero);
+                thumbnail.Save(Path.Combine(ThumbnailPath, fileName));
+
+                return fileName;
             }
             else
             {
@@ -107,16 +105,9 @@ namespace WebApplication1.Model
         //validera MIME-typ
         public static bool IsValidImage(Image Image)
         {
-            if (Image.RawFormat.Guid == System.Drawing.Imaging.ImageFormat.Gif.Guid ||
+            return Image.RawFormat.Guid == System.Drawing.Imaging.ImageFormat.Gif.Guid ||
                 Image.RawFormat.Guid == System.Drawing.Imaging.ImageFormat.Jpeg.Guid ||
-                Image.RawFormat.Guid == System.Drawing.Imaging.ImageFormat.Png.Guid)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+                Image.RawFormat.Guid == System.Drawing.Imaging.ImageFormat.Png.Guid;
         }
 
         //om det finns en eller flera filer med samma namn loopas de igenom

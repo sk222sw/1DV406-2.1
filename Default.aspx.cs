@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using WebApplication1.Model;
+using WebApplication1.App_Infrastructure;
 
 namespace WebApplication1
 {
@@ -17,7 +18,10 @@ namespace WebApplication1
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            SuccessPlaceHolder.Visible = false;
+
+            SuccessLabel.Text = Page.GetTempData("Success") as String;
+            SuccessPlaceHolder.Visible = !String.IsNullOrWhiteSpace(SuccessLabel.Text);
+
 
             if (!String.IsNullOrWhiteSpace(ImageQuery))
             {
@@ -36,6 +40,9 @@ namespace WebApplication1
                 stream = ImageFileUpload.PostedFile.InputStream;
 
                 Gallery.SaveImage(stream, fileName);
+                Page.SetTempData("Success", "Bilden laddades upp!");
+                Response.Redirect(Request.RawUrl);
+
 
                 SuccessPlaceHolder.Visible = true;
             }
